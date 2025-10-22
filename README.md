@@ -54,25 +54,4 @@ php artisan serve
 
 
 
-## 🤝 Contribuição
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="#" title="defina o título do link">
-        <img src="https://github.com/user-attachments/assets/df2ba1c3-01cc-4ea3-b35b-44d738295961" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
-        <sub>
-          <a href="https://github.com/luizfsb">Luizfsb</a>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="#" title="defina o título do link">
-        <img src="https://github.com/user-attachments/assets/f656a2ed-12f9-4e59-a984-49f3cb083e5a" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
-        <sub>
-          <a href="https://github.com/ToDGusta">ToDGusta</a>
-        </sub>
-      </a>
-    </td>
-  </tr>
-</table>
