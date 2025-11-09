@@ -2,7 +2,8 @@
 
 <br>
 
-![Captura de tela 2024-11-06 145309](https://github.com/user-attachments/assets/0c038317-c0a5-4d07-b0bc-6e73c21bad7c)
+<img width="1306" height="507" alt="image" src="https://github.com/user-attachments/assets/04b9166d-7262-43b0-b00c-2632c2de2d98" />
+
 
 > Rodaki é um site de locação de bicicletas e patinetes. Com a missão de propor um deslocamento sustentável e rápido.
 O site possui as funções de cadastro e login, retirada e devolução das bicicletas e patinetes e geolocalização por API do Google Maps.
