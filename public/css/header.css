@@ -4,16 +4,15 @@
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 0 1rem;
-    background-color: var(--azul-escuro);
+    background-color: var(--branco);
 }
 
 
 .cabecalho_logo {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 3px;
     margin-left: 1rem;
@@ -21,53 +20,126 @@
 }
 
 .nome_logo-cabecalho {
-    color: var(--branco);
+    color: var(--preto);
 }
 
 
 .cabecalho_links-lista {
     display: flex;
+    gap: 15rem;
 }
 
 .link_item {
-    margin-right: 4rem;
+    display: flex;
+    align-items: center;
+    margin-right: 0;
     text-decoration: none;
-    color: var(--branco);
-    position: relative;
+    color: var(--preto);
     padding-bottom: 3px;
-    transition: 0.4s ease-in-out;
 }
 
-.link_item::after {
-    content: " ";
-    width: 0%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--verde);
-    position: absolute;
-    transition: 0.4s ease-in-out;
+.links_navegacao {
+    display: flex;
+    gap: 2rem;
 }
 
-.link_item:hover::after {
-    width: 100%;
+.links_acesso {
+    display: flex;
+    gap: 2rem;
 }
 
 .menu-hamburguer {
     display: none;
 }
 
-/* Responsividade mobile */
+.loginRes,
+.cadastrarRes {
+    display: none;
+}
 
-@media screen and (max-width: 769px) {
+.login {
+    text-decoration: none;
+    color: var(--preto);
+    font-weight: 500;
+    border: 1.5px solid var(--preto);
+    padding: 0.1rem 0.3rem;
+    border-radius: 8px;
+    box-shadow:
+        -7px -7px 20px 0px #fff9,
+        -4px -4px 5px 0px #fff9,
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001;
+}
+
+.cadastrar {
+    text-decoration: none;
+    color: var(--branco);
+    font-weight: 500;
+    border: 2px solid var(--branco);
+    padding: 0.1rem 0.3rem;
+    border-radius: 8px;
+    background-color: var(--verde);
+    box-shadow:
+        -7px -7px 20px 0px #fff9,
+        -4px -4px 5px 0px #fff9,
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001;
+}
+
+.perfilRes,
+.sairRes {
+    display: none;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: var(--preto);
+    font-weight: 500;
+    border: 1.5px solid var(--preto);
+    padding: 0.1rem 0.8rem;
+    border-radius: 8px;
+    box-shadow:
+        -7px -7px 20px 0px #fff9,
+        -4px -4px 5px 0px #fff9,
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001;
+}
+
+.sair {
+    text-decoration: none;
+    color: var(--branco);
+    font-weight: 500;
+    border: 2px solid var(--branco);
+    padding: 0.1rem 0.8rem;
+    border-radius: 8px;
+    background-color: #b40707;
+    box-shadow:
+        -7px -7px 20px 0px #fff9,
+        -4px -4px 5px 0px #fff9,
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 930px) {
+    .cabecalho_links-lista {
+        gap: 5rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
 
     .menu-hamburguer {
         display: block;
-        padding-right: 1rem;
+        padding: 0.5rem 1rem;
     }
 
     .menu-hamburguer-preto {
-        background-color: var(--cinza-claro);
+        background-color: var(--preto);
         padding: 1rem 2rem;
         text-align: center;
         right: 0;
@@ -77,22 +149,24 @@
 
     .cabecalho_container {
         position: relative;
+        justify-content: space-between;
     }
-   
+
     .cabecalho_links-lista {
         display: flex;
         flex-direction: column;
         position: absolute;
-        background-color: var(--cinza-claro);
-        top: 100%;
+        background-color: var(--preto);
+        top: 90%;
         right: 0;
-        border: 1px solid var(--preto);
         display: none;
+        width: 250px;
+        margin-right: 1.5rem;
+        border-radius: 5px;
     }
 
     .link-lista-item {
-        border-bottom: 1px solid var(--preto);
-        padding: 1.5rem 0;
+        padding: 0;
     }
 
     .link-lista-item:hover {
@@ -100,32 +174,37 @@
     }
 
     .link_item {
-        color: var(--preto);
+        color: var(--branco);
         font-size: 1.3rem;
-        padding: 1.5rem 5rem 1.5rem 1.5rem;
+        width: 100%;
         margin-right: 0;
+        display: block;
+        padding: 1.5rem 0;
+        text-align: center;
     }
 
-    .inicio,
+    .loginRes,
+    .cadastrarRes,
+    .perfilRes,
+    .sairRes {
+        display: block;
+    }
+
     .login,
+    .cadastrar,
     .perfil,
     .sair {
-        padding: 1.5rem 70% 1.5rem 1rem;
+        display: none;
     }
 
-    .estacao {
-        padding: 1.5rem 50% 1.5rem 1rem;
-    }
-
-    .cadastrar {
-        padding: 1.5rem 37% 1.5rem 1rem;
-    }
-
-    .comoFunciona {
-       padding: 1.5rem 4rem 1.5rem 1rem;
-    }
-
-    .link_item:hover::after {
-        width: 0;
+    .links_navegacao,
+    .links_acesso {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 0;
     }
 }

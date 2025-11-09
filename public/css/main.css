@@ -23,7 +23,7 @@
 
 .apresentacao_titulo {
     font-weight: 700;
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 .apresentacao_paragrafo {
@@ -61,7 +61,7 @@
 /* Conteudo da sessao sobre */
 
 .sobre {
-    background-color: var(--verde-claro);
+    background-color: var(--verde-agua);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,7 +83,7 @@
 
 .sobre_paragrafo {
     width: 68%;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
 }
 
 .sobre_imagem {
@@ -110,9 +110,9 @@
 }
 
 .instrucoes_paragrafo {
-    color: var(--preto);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--cinza);
+    text-align: center;
 }
 
 .instrucoes_cards {
@@ -127,14 +127,13 @@
 .cards_item {
     background-color: var(--branco);
     color: var(--preto);
-    width: 18rem;
-    height: 23rem;
+    width: 19rem;
+    height: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem;
-    border-radius: 20px;
-    box-shadow: 9px -9px var(--cinza);
+    padding: 2rem 1rem;
+    border-radius: 6px;
 }
 
 .intrucoes_icone {
@@ -216,7 +215,6 @@ input:checked {
 
 .logo {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 3px;
 }

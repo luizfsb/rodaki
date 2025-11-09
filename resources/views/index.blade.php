@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 
     <!-- Arquivos JS -->
-     
+
     <script type="module" src="{{ asset('js/scroll.js') }}"></script>
     <script type="module" src="{{ asset('js/menu.js') }}"></script>
 
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 
-    <title>Eco Point</title>
+    <title>Rodaki</title>
 </head>
 
 <body>
@@ -44,47 +44,69 @@
                 <a href="{{ route('index') }}">
                     <img src="{{ asset('img/icones/logo.svg') }}" alt="imagem da logo" class="icone_logo-cabecalho">
                 </a>
-                <p class="nome_logo-cabecalho">Eco Point</p>
+                <p class="nome_logo-cabecalho">Rodaki</p>
             </div>
             <div class="cabecalho_container-links">
                 <ul class="cabecalho_links-lista" id="menu-links">
-                    <li class="link-lista-item">
-                        <a href="{{ route('index') }}" class="link_item">Inicio</a>
-                    </li>
-                    <li class="link-lista-item">
-                        <a href="#" id="instrucao" class="link_item comoFunciona">Como funciona?</a>
-                    </li>
-                    <li class="link-lista-item">
-                        <a href="{{ route('estacoes') }}"  class="link_item estacao">Estações</a>
-                    </li>
-                    <li class="link-lista-item">
-                        <a href="{{ route('planos') }}"  class="link_item estacao">Planos</a>
-                    </li>
-                    @auth
-                    <li class="link-lista-item">
-                        <a href="{{ route('profile.edit') }}" class="link_item perfil">Perfil</a>
-                    </li>
-                    <li class="link-lista-item">
-                        <form action="{{ route('logout') }}" method="POST" class="link_sair">
-                            @csrf
-                            <a href="{{ route('logout') }}" class="link_item sair" onclick="event.preventDefault(); this.closest('form').submit();">
-                                Sair
+                    <ul class="links_navegacao">
+                        <li class="link-lista-item">
+                            <a href="{{ route('index') }}" class="link_item">Inicio</a>
+                        </li>
+                        <li class="link-lista-item">
+                            <a href="{{ route('estacoes') }}" class="link_item estacao">Estações</a>
+                        </li>
+                        <li class="link-lista-item">
+                            <a href="{{ route('planos') }}" class="link_item estacao">Planos</a>
+                        </li>
+                    </ul>
+                    <ul class="links_acesso">
+                        @auth
+                        <li class="link-lista-item">
+                            <a href="{{ route('profile.edit') }}" class="link_item perfil">
+                                <img src="{{ asset('img/icones/icone-usuario.svg')}}" alt="imagem usuario">
+                                <p>Perfil</p>
                             </a>
-                        </form>
-                    </li>
-
-                    @endauth
-                    @guest
-                    <li class="link-lista-item">
-                        <a href="{{ route('login') }}" class="link_item login" >Login</a>
-                    </li>
-                    <li class="link-lista-item">
-                        <a href="{{ route('register')}}" class="link_item cadastrar">Cadastre-se</a>
-                    </li>
-                    @endguest
+                        </li>
+                        <li class="link-lista-item">
+                            <form action="{{ route('logout') }}" method="POST" class="link_sair">
+                                @csrf
+                                <a href="{{ route('logout') }}" class="link_item sair" onclick="event.preventDefault(); this.closest('form').submit();">
+                                    Sair
+                                </a>
+                            </form>
+                        </li>
+                        <li class="link-lista-item">
+                            <a href="{{ route('profile.edit') }}" class="link_item perfilRes">
+                                Perfil
+                            </a>
+                        </li>
+                        <li class="link-lista-item">
+                            <form action="{{ route('logout') }}" method="POST" class="link_sair">
+                                @csrf
+                                <a href="{{ route('logout') }}" class="link_item sairRes" onclick="event.preventDefault(); this.closest('form').submit();">
+                                    Sair
+                                </a>
+                            </form>
+                        </li>
+                        @endauth
+                        @guest
+                        <li class="link-lista-item">
+                            <a href="{{ route('login') }}" class="link_item login">Login</a>
+                        </li>
+                        <li class="link-lista-item">
+                            <a href="{{ route('register')}}" class="link_item cadastrar">Cadastre-se</a>
+                        </li>
+                        <li class="link-lista-item">
+                            <a href="{{ route('login') }}" class="link_item loginRes">Login</a>
+                        </li>
+                        <li class="link-lista-item">
+                            <a href="{{ route('register')}}" class="link_item cadastrarRes">Cadastre-se</a>
+                        </li>
+                        @endguest
+                    </ul>
                 </ul>
             </div>
-            <img src="{{ asset('img/icones/icone-menu.svg') }}" alt="icone do menu hamburguer" class="menu-hamburguer" id="menu-btn">
+            <img src="{{ asset('img/icones/icone-menuPreto.svg') }}" alt="icone do menu hamburguer" class="menu-hamburguer" id="menu-btn">
         </nav>
     </header>
 
@@ -93,7 +115,7 @@
     <main class="container">
         <section class="apresentacao imagem_aprensentacao">
             <div class="apresentacao_texto">
-                <h1 class="apresentacao_titulo">Eco point</h1>
+                <h1 class="apresentacao_titulo">Rodaki</h1>
                 <p class="apresentacao_paragrafo">
                     Locações de bicicletas e patinetes elétricos<br>
                     em toda Belo Horizonte</p>
@@ -108,24 +130,24 @@
             <img src="{{ asset('img/patinete.png')}}" alt="" class="sobre_imagem">
             <div class="sobre_texto">
                 <h2 class="sobre_titulo">Quem somos nos?</h2>
-                <p class="sobre_paragrafo">O Eco Point e uma empresa focada no meio ambiente. Nossa missão é propor uma forma de deslocamento sustentável e rápida, com preços acessíveis para todos, fornecendo bicicletas e patinetes elétricos.</p>
+                <p class="sobre_paragrafo">O Rodaki e uma empresa focada no meio ambiente. Nossa missão é propor uma forma de deslocamento sustentável e rápida, com preços acessíveis para todos, fornecendo bicicletas e patinetes elétricos.</p>
             </div>
         </section>
 
         <!-- Sessao das intrucoes de como utilizar nossa plataforma -->
 
-        <section class="instrucoes"  id="container_instrucao">
+        <section class="instrucoes" id="container_instrucao">
             <h3 class="instrucoes_titulo">Como funciona?</h3>
             <div class="instrucoes_cards">
                 <div class="cards_item">
-                    <img src="{{ asset('img/icones/icone-contrato.svg') }}" alt="icone do plano" class="intrucoes_icone">
+                    <img src="{{ asset('img/icones/icone-dinheiro.svg') }}" alt="icone do plano" class="intrucoes_icone">
                     <p class="intrucoes_subtitulo">Planos</p>
                     <p class="instrucoes_paragrafo">Se cadastrando em nosso site, ficará disponível nossos planos de assinatura mensais, sendo bronze, prata e ouro, onde poderá avaliar os transportes e preços de maior interesse, podendo realizar o pagamento por Pix, cartão de crédito ou débito.</p>
                 </div>
                 <div class="cards_item">
                     <img src="{{ asset('img/icones/icone-bicicleta.svg') }}" alt="icone da bicicleta" class="intrucoes_icone">
                     <p class="intrucoes_subtitulo">Locação</p>
-                    <p class="instrucoes_paragrafo">Ao realizar o cadastro e assinatura, vá à estação dá eco point mais próxima de você, para realizar a retirada de sua bicicleta ou patinete. Para realizar a devolução, basta ir a qualquer estação dá eco point.</p>
+                    <p class="instrucoes_paragrafo">Ao realizar o cadastro e assinatura, vá à estação dá Rodaki mais próxima de você, para realizar a retirada de sua bicicleta ou patinete. Para realizar a devolução, basta ir a qualquer estação dá Rodaki.</p>
                 </div>
             </div>
         </section>
@@ -168,7 +190,7 @@
                 <a href="{{ route('index') }}">
                     <img src="{{ asset('img/icones/logo.svg') }}" alt="imagem da logo" class="icone_logo-rodape">
                 </a>
-                <p class="nome_logo-rodape">Eco Point</p>
+                <p class="nome_logo-rodape">Rodaki</p>
             </div>
             <div class="rodape_redes">
                 <img src="{{ asset('img/icones/icone-linkedin.svg') }}" alt="Icone do linkedin" class="rodape_img-redes">
@@ -177,15 +199,15 @@
             </div>
         </div>
         <div class="rodape_empresa">
-            <p class="rodape_titulo-coluna">Eco Point LTDA</p>
+            <p class="rodape_titulo-coluna">Rodaki LTDA</p>
             <p class="rodape_cnpj">CNPJ: 00.000.000/0000-00</p>
             <p class="rodape_endereco">Belo horizonte MG - Brasil</p>
-            <p class="rodape_endereco">Rua eco point, 80 - Meio Ambiente</p>
+            <p class="rodape_endereco">Rua Rodaki, 80 - Meio Ambiente</p>
         </div>
         <div class="rodape_navegacao">
             <p class="rodape_titulo-coluna">Navegação</p>
             <a href="#" id="inicioRodape" class="rodape_link">Inicio</a>
-            <a href="#" id="instrucaoRodape" class="rodape_link">Como funciona?</a>
+            <a href="{{ route('estacoes') }}" class="rodape_link">Planos</a>
             <a href="{{ route('estacoes') }}" class="rodape_link">Estações</a>
         </div>
         <div class="rodape_contatos">
@@ -196,7 +218,7 @@
             </div>
             <div class="rodape_email">
                 <img src="{{ asset('img/icones/icone-email.svg') }}" alt="imagem do icone do e-mail" class="rodape_icone-contatos">
-                <p>ecopoint@ecopoint.com.br</p>
+                <p>rodaki@rodaki.com.br</p>
             </div>
         </div>
     </footer>

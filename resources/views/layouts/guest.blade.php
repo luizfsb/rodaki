@@ -36,7 +36,7 @@
         <div>
             <a href="/" class="logo">
                 <img src="{{ asset('img/icones/logo.svg') }}" alt="imagem da logo" class="icone_logo">
-                <p class="logo-nome">Eco Point</p>
+                <p class="logo-nome">Rodaki</p>
             </a>
         </div>
 

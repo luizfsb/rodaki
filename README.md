@@ -1,10 +1,10 @@
-<h1 align="center">Projeto Eco Point - UPX 4 Centro Universitario Newton Paiva</h1>
+<h1 align="center">Projeto Rodaki - UPX 4 Centro Universitario Newton Paiva</h1>
 
 <br>
 
 ![Captura de tela 2024-11-06 145309](https://github.com/user-attachments/assets/0c038317-c0a5-4d07-b0bc-6e73c21bad7c)
 
-> Eco point é um site de locação de bicicletas e patinetes. Com a missão de propor um deslocamento sustentável e rápido.
+> Rodaki é um site de locação de bicicletas e patinetes. Com a missão de propor um deslocamento sustentável e rápido.
 O site possui as funções de cadastro e login, retirada e devolução das bicicletas e patinetes e geolocalização por API do Google Maps.
 
 <br>

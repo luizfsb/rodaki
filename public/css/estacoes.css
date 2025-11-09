@@ -1,35 +1,24 @@
-.estacoes {
+body {
     background-color: var(--branco);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 5rem;
 }
 
-.estacoes_titulo {
-    font-family: var(--font-principal);
-    color: var(--preto);
-    margin-top: 9rem;
-    font-weight: 700;
-    font-size: 2rem;
+header {
+    position: relative; 
+    z-index: 100;       
 }
 
 /* Google maps */
 
 #map {
-    height: 500px;
-    width: 750px;
+    height: 400px;
+    width: 100%;
+    position: relative; 
+    z-index: 1;
 }
 
 .flag-icon {
     position: relative;
     left: 10px;
-}
-
-.estacoes_mapa-google {
-    border: 4px solid var(--verde-agua);
-    border-radius: 5px;
 }
 
 .material-symbols-outlined {
@@ -42,38 +31,110 @@
 
 /* Bicicletas e patinetes disponiveis */
 
+
 .container_qtd {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1.5rem;
+    padding: 1rem 4rem 5rem 4rem;
+}
+
+.btn-locar {
+    background-color: #344CB7;
+    border: 1px solid var(--branco);
+    border-radius: 4px;
+    padding: 0.7rem 1.5rem;
+    box-shadow:
+        -7px -7px 20px 0px #fff9,
+        -4px -4px 5px 0px #fff9,
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001;
+    color: var(--branco);
+    font-weight: 600;
+    font-size: 0.8rem;
+    cursor: pointer;
 }
 
 .container_qtd-lista {
     display: flex;
-    gap: 3rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 5rem;
     font-family: var(--font-principal);
     margin-top: 0.8rem;
-}
-
-.qtd-atualizacao-titulo {
-    font-family: var(--font-principal);
-    color: var(--preto);
+    
 }
 
 .estacoes_qtd-item {
     display: flex;
-    gap: 0.9rem;
-    margin-bottom: 0.5rem;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--branco);
+    padding: 1rem 5rem 0.8rem 0.8rem;
+    box-shadow:
+        -7px -7px 20px 0px #fff9,
+        -4px -4px 5px 0px #fff9,
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001;
+    border-radius: 5px;
+    border: 1px solid #E0E0E0;
 }
 
 .estacoes_qtd-nome {
-    font-weight: 700;
-    color: var(--verde-escuro);
+    font-size: 0.8rem;
+    background-color: var(--verde-escuro);
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 1px solid #E0E0E0;
+    top: -10px;
+    left: 5px;
+    width: 100px;
+    color: var(--branco)
+}
+
+.estacoes_qtd-texto {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    text-align: start;
+    color: var(--preto);
 }
 
 
 /* Retirada e devolucao */
 
+.modal-container {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Centraliza o formulário */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Garante que fique na frente de tudo */
+}
+
+/* Classe que será adicionada via JS para mostrar o modal */
+.modal-container.active {
+    display: flex;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
 .container_locacao-form {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,19 +143,16 @@
     padding: 4rem 6rem;
     margin-bottom: 4rem;
     border-radius: 15px;
-    border: 3px solid var(--verde-agua);
-    box-shadow:
-        -7px -7px 20px 0px #fff9,
-        -4px -4px 5px 0px #fff9,
-        7px 7px 20px 0px #0002,
-        4px 4px 5px 0px #0001;
+    
 }
+
 
 .nome-label,
 .codigo-label {
     font-family: var(--font-principal);
     color: var(--preto);
     font-size: 1.1rem;
+    
 }
 
 .estacao-input,
@@ -105,6 +163,7 @@
     padding: 1rem 0;
     color: var(--preto);
     text-align: center;
+    width: 200px;
 }
 
 .estacao-input::placeholder {
@@ -120,14 +179,14 @@
 .locacao-opcoes {
     background-color: var(--cinza-claro);
     padding: 0.2rem 0;
-    width: 60%;
+    width: 200px;
     text-align: center;
     border-radius: 6px;
     color: var(--preto);
 }
 
 .btn-submit {
-    width: 60%;
+    width: 200px;
     padding: 0.5rem 0;
     background-color: var(--verde);
     border: none;
@@ -157,7 +216,7 @@ hr {
 
     #map {
         height: 300px;
-        width: 300px;
+        width: 100%;
     }
 
     /* Bicicletas e patinetes disponiveis */
@@ -165,7 +224,9 @@ hr {
     .container_qtd {
         display: flex;
         flex-direction: column;
+        align-items: center;
         margin: 0 1rem 0 1rem;
+        width: 80%;
     }
 
     .container_qtd-lista {
@@ -198,7 +259,7 @@ hr {
     .estacao-input,
     .codigo-input {
         padding: 0.5rem 0;
-        width: 80%;
+        width: 200px;
     }
 
     .estacao-input::placeholder {
@@ -218,6 +279,7 @@ hr {
     .container_qtd {
         display: flex;
         flex-direction: column;
+        align-items: center;
         margin: 0 1rem 0 1rem;
     }
 
