@@ -71,6 +71,7 @@ header {
 }
 
 .estacoes_qtd-item {
+    position: relative;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -86,6 +87,7 @@ header {
 }
 
 .estacoes_qtd-nome {
+    position: absolute;
     font-size: 0.8rem;
     background-color: var(--verde-escuro);
     padding: 5px 10px;
@@ -225,8 +227,9 @@ hr {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 0 1rem 0 1rem;
-        width: 80%;
+        padding: 1rem 1.5rem; 
+        margin: 0;
+        box-sizing: border-box;
     }
 
     .container_qtd-lista {
@@ -238,7 +241,9 @@ hr {
     .estacoes_qtd-item {
         display: flex;
         flex-direction: column;
-
+        
+        max-width: 100%; 
+        box-sizing: border-box;
     }
 
     /* Retirada e devolucao */
