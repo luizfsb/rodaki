@@ -131,45 +131,6 @@
         </section>
     </main>
 
-    <!-- Rodape -->
-    <hr>
-    <footer class="rodape">
-        <div class="rodape_container-logo">
-            <div class="rodape_logo-rodape">
-                <a href="{{ route('index') }}">
-                    <img src="{{ asset('img/icones/logo.svg') }}" alt="imagem da logo" class="icone_logo-rodape">
-                </a>
-                <p class="nome_logo-rodape">Rodaki</p>
-            </div>
-            <div class="rodape_redes">
-                <img src="{{ asset('img/icones/icone-linkedin.svg') }}" alt="Icone do linkedin" class="rodape_img-redes">
-                <img src="{{ asset('img/icones/icone-instagram.svg') }}" alt="icone do instagram" class="rodape_img-redes">
-                <img src="{{ asset('img/icones/icone-facebook.svg') }}" alt="icone do facebook" class="rodape_img-redes">
-            </div>
-        </div>
-        <div class="rodape_empresa">
-            <p class="rodape_titulo-coluna">Rodaki LTDA</p>
-            <p class="rodape_cnpj">CNPJ: 00.000.000/0000-00</p>
-            <p class="rodape_endereco">Belo horizonte MG - Brasil</p>
-            <p class="rodape_endereco">Rua Roda ki, 80 - Meio Ambiente</p>
-        </div>
-        <div class="rodape_navegacao">
-            <p class="rodape_titulo-coluna">Navegação</p>
-            <a href="#" id="inicioRodape" class="rodape_link">Inicio</a>
-            <a href="{{ route('estacoes') }}" class="rodape_link">Estações</a>
-        </div>
-        <div class="rodape_contatos">
-            <p class="rodape_titulo-coluna">Contatos</p>
-            <div class="rodape_numero">
-                <img src="{{ asset('img/icones/icone-telefone.svg') }}" alt="imagem do icone do telefone" class="rodape_icone-contatos">
-                <p class="numero">0800 000 0000</p>
-            </div>
-            <div class="rodape_email">
-                <img src="{{ asset('img/icones/icone-email.svg') }}" alt="imagem do icone do e-mail" class="rodape_icone-contatos">
-                <p>rodaki@rodaki.com.br</p>
-            </div>
-        </div>
-    </footer>
 </body>
 
 </html>

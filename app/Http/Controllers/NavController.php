@@ -23,16 +23,16 @@ class NavController extends Controller
 
     public function Premium()
     {
-        return view('Premium');
+        return view('premium');
     }
 
     public function Standard()
     {
-        return view('Standard');
+        return view('standard');
     }
 
     public function Plus()
     {
-        return view('Plus');
+        return view('plus');
     }
 }
