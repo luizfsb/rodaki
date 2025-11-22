@@ -142,7 +142,7 @@
                 <div class="cards_item">
                     <img src="{{ asset('img/icones/icone-dinheiro.svg') }}" alt="icone do plano" class="intrucoes_icone">
                     <p class="intrucoes_subtitulo">Planos</p>
-                    <p class="instrucoes_paragrafo">Se cadastrando em nosso site, ficará disponível nossos planos de assinatura mensais, sendo bronze, prata e ouro, onde poderá avaliar os transportes e preços de maior interesse, podendo realizar o pagamento por Pix, cartão de crédito ou débito.</p>
+                    <p class="instrucoes_paragrafo">Se cadastrando em nosso site, ficará disponível nossos planos de assinatura mensais, sendo Standard, Plus e Premium, onde poderá avaliar os transportes e preços de maior interesse, podendo realizar o pagamento por Pix, cartão de crédito ou débito.</p>
                 </div>
                 <div class="cards_item">
                     <img src="{{ asset('img/icones/icone-bicicleta.svg') }}" alt="icone da bicicleta" class="intrucoes_icone">

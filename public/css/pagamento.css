@@ -1,7 +1,6 @@
-/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
-    background-color: #001F3F; /* Fundo azul escuro */
+    background-color: #001f3f;
     color: #333;
 }
 
@@ -13,13 +12,6 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
-
-/* Cabeçalho */
-/* header {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-} */
 
 .cabecalho_container {
     padding-top: 20px;
@@ -44,37 +36,36 @@ body {
     font-weight: bold;
 }
 
-/* Divisão dos planos e pagamento */
 .plano-pagamento {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-/* Estilos para os planos */
 .plano-detalhe {
     flex: 1;
-    color: #F5F5F5;
+    color: #f5f5f5;
     padding: 20px;
     border-radius: 8px;
     margin-right: 20px;
     position: relative;
 }
 
-.plano-detalhe.bronze {
-    background-color: #cd7f32; /* Cor do plano Bronze */
+.plano-detalhe.Standard {
+    background-color: #cd7f32;
 }
 
-.plano-detalhe.prata {
-    background-color: #c0c0c0; /* Cor do plano Prata */
+.plano-detalhe.Plus {
+    background-color: #c0c0c0;
 }
 
-.plano-detalhe.ouro {
-    background-color: #ffd700; /* Cor do plano Ouro */
+.plano-detalhe.Premium {
+    background-color: #ffd700;
 }
 
-.plano-detalhe h2, .plano-detalhe h3 {
-    color: #F5F5F5;
+.plano-detalhe h2,
+.plano-detalhe h3 {
+    color: #f5f5f5;
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 20px;
@@ -96,12 +87,23 @@ body {
     font-weight: 500;
 }
 
-/* Área de pagamento */
 .form-pagamento {
     flex: 1.5;
     background-color: #f3f3f3;
     padding: 20px;
     border-radius: 8px;
+}
+
+.form-pagamento form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-pagamento h3,
+.form-pagamento label,
+.form-pagamento input {
+    color: #021526 !important;
 }
 
 .form-pagamento label {
@@ -143,8 +145,86 @@ body {
 }
 
 @keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+}
+
+@media (max-width: 992px) {
+    .plano-pagamento {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .plano-detalhe {
+        margin-right: 0;
+    }
+
+    .form-pagamento {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .cabecalho_logo .nome_logo {
+        font-size: 1.5em;
+    }
+
+    .plano-detalhe h2,
+    .plano-detalhe h3 {
+        font-size: 18px;
+    }
+
+    .plano-detalhe ul li,
+    .plano-detalhe p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecalho_container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .icone_logo {
+        width: 40px;
+        height: 40px;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .nome_logo {
+        font-size: 1.3em;
+    }
+
+    .plano-detalhe {
+        padding: 15px;
+    }
+
+    .plano-detalhe ul li {
+        margin-bottom: 12px;
+    }
+
+    .form-pagamento input,
+    .btn-cupom,
+    .btn-submit {
+        padding: 8px;
+    }
 }

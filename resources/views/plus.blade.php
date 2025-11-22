@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Eco Point - Plano Ouro</title>
+    <title>Rodaki - Plano Plus</title>
 
     <!-- Imagem no navegador -->
 
@@ -21,7 +22,7 @@
     <link rel="stylesheet" href="{{ asset('css/pagamento.css') }}">
 
     <!-- Arquivos JS -->
-     
+
     <script type="module" src="{{ asset('js/scroll.js') }}"></script>
     <script type="module" src="{{ asset('js/menu.js') }}"></script>
 
@@ -31,8 +32,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
 </head>
+
 <body>
     <header>
         <nav class="cabecalho_container">
@@ -40,25 +41,25 @@
                 <a href="{{ route('index') }}">
                     <img src="{{ asset('img/icones/logo.svg') }}" alt="imagem da logo" class="icone_logo-cabecalho">
                 </a>
-                <p class="nome_logo-cabecalho">Eco Point</p>
+                <p class="nome_logo-cabecalho">Rodaki</p>
             </div>
         </nav>
     </header>
 
     <main class="container">
         <section class="plano-pagamento">
-            <div class="plano-detalhe ouro">
-                <h2>Plano Ouro</h2>
-                <p>Ideal para quem busca a melhor experiência de uso com todos os benefícios.</p>
+            <div class="plano-detalhe Plus">
+                <h2>Plano Plus</h2>
+                <p>Ideal para quem busca um equilíbrio entre preço e benefícios.</p>
                 <div class="descricao">
                     <h3>Detalhes do Plano:</h3>
-                    <p>O Plano Ouro oferece acesso ilimitado a bicicletas tradicionais e elétricas, além de um suporte premium para garantir a melhor experiência em suas viagens. Perfeito para quem usa frequentemente as bicicletas da Eco Point.</p>
+                    <p>O Plano Plus oferece acesso a bicicletas tradicionais e elétricas, proporcionando mais versatilidade para suas necessidades de transporte. É a escolha ideal para quem deseja explorar a cidade de maneira sustentável.</p>
                 </div>
                 <ul>
-                    <li>Acesso ilimitado a bicicletas tradicionais e elétricas</li>
-                    <li>Disponibilidade em todas as estações Eco Point</li>
-                    <li>Suporte premium 24/7</li>
-                    <li>Uso ilimitado por dia</li>
+                    <li>Acesso a bicicletas tradicionais e elétricas</li>
+                    <li>Disponibilidade em todas as estações Rodaki</li>
+                    <li>Suporte técnico disponível</li>
+                    <li>Até 4 horas de uso por dia</li>
                     <li>Cancelamento a qualquer momento sem taxas</li>
                 </ul>
             </div>
@@ -101,4 +102,5 @@
         }
     </script>
 </body>
+
 </html>

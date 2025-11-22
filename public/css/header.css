@@ -8,6 +8,7 @@
     align-items: center;
     padding: 0 1rem;
     background-color: var(--branco);
+    width: 100%;
 }
 
 
@@ -17,16 +18,29 @@
     gap: 3px;
     margin-left: 1rem;
     padding: 1rem 0;
+
+    @media (max-width: 1024px) {
+        a {
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
 }
 
 .nome_logo-cabecalho {
     color: var(--preto);
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
 }
 
 
 .cabecalho_links-lista {
     display: flex;
-    gap: 15rem;
+    gap: 5rem;
 }
 
 .link_item {
@@ -50,6 +64,10 @@
 
 .menu-hamburguer {
     display: none;
+
+    @media (max-width: 1024px) {
+        display: block;
+    }
 }
 
 .loginRes,
@@ -136,6 +154,7 @@
     .menu-hamburguer {
         display: block;
         padding: 0.5rem 1rem;
+        color: #0002;
     }
 
     .menu-hamburguer-preto {

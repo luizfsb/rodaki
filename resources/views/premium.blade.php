@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Eco Point - Plano Bronze</title>
+    <title>Rodaki - Plano Premium</title>
 
     <!-- Imagem no navegador -->
 
@@ -21,7 +22,7 @@
     <link rel="stylesheet" href="{{ asset('css/pagamento.css') }}">
 
     <!-- Arquivos JS -->
-     
+
     <script type="module" src="{{ asset('js/scroll.js') }}"></script>
     <script type="module" src="{{ asset('js/menu.js') }}"></script>
 
@@ -33,6 +34,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 </head>
+
 <body>
     <header>
         <nav class="cabecalho_container">
@@ -40,25 +42,25 @@
                 <a href="{{ route('index') }}">
                     <img src="{{ asset('img/icones/logo.svg') }}" alt="imagem da logo" class="icone_logo-cabecalho">
                 </a>
-                <p class="nome_logo-cabecalho">Eco Point</p>
+                <p class="nome_logo-cabecalho">Rodaki</p>
             </div>
         </nav>
     </header>
 
     <main class="container">
         <section class="plano-pagamento">
-            <div class="plano-detalhe bronze">
-                <h2>Plano Bronze</h2>
-                <p>Ideal para quem busca uma opção acessível e prática para o dia a dia.</p>
+            <div class="plano-detalhe Premium">
+                <h2>Plano Premium</h2>
+                <p>Ideal para quem busca a melhor experiência de uso com todos os benefícios.</p>
                 <div class="descricao">
                     <h3>Detalhes do Plano:</h3>
-                    <p>O Plano Bronze oferece acesso a uma rede de bicicletas tradicionais, permitindo que você se mova facilmente pela cidade. Este plano é perfeito para quem deseja uma alternativa sustentável e econômica para o transporte urbano.</p>
+                    <p>O Plano Premium oferece acesso ilimitado a bicicletas tradicionais e elétricas, além de um suporte Plus para garantir a melhor experiência em suas viagens. Perfeito para quem usa frequentemente as bicicletas da Rodaki.</p>
                 </div>
                 <ul>
-                    <li>Acesso a bicicletas tradicionais</li>
-                    <li>Disponibilidade em todas as estações Eco Point</li>
-                    <li>Suporte básico em caso de problemas técnicos</li>
-                    <li>Até 2 horas de uso por dia</li>
+                    <li>Acesso ilimitado a bicicletas tradicionais e elétricas</li>
+                    <li>Disponibilidade em todas as estações Rodaki</li>
+                    <li>Suporte Plus 24/7</li>
+                    <li>Uso ilimitado por dia</li>
                     <li>Cancelamento a qualquer momento sem taxas</li>
                 </ul>
             </div>
@@ -101,4 +103,5 @@
         }
     </script>
 </body>
+
 </html>

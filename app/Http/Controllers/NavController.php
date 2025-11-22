@@ -6,28 +6,33 @@ use Illuminate\Http\Request;
 
 class NavController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         return view('index');
     }
 
-    public function estacoes(){
+    public function estacoes()
+    {
         return view('estacoes');
     }
 
-    public function planos(){
+    public function planos()
+    {
         return view('planos');
     }
 
-    public function ouro(){
-        return view('ouro');
+    public function Premium()
+    {
+        return view('Premium');
     }
 
-    public function bronze(){
-        return view('bronze');
+    public function Standard()
+    {
+        return view('Standard');
     }
 
-    public function prata(){
-        return view('prata');
+    public function Plus()
+    {
+        return view('Plus');
     }
-
 }

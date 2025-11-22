@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Eco Point - Plano Prata</title>
+    <title>Rodaki - Plano Standard</title>
 
     <!-- Imagem no navegador -->
 
@@ -21,7 +22,7 @@
     <link rel="stylesheet" href="{{ asset('css/pagamento.css') }}">
 
     <!-- Arquivos JS -->
-     
+
     <script type="module" src="{{ asset('js/scroll.js') }}"></script>
     <script type="module" src="{{ asset('js/menu.js') }}"></script>
 
@@ -31,7 +32,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 </head>
+
 <body>
     <header>
         <nav class="cabecalho_container">
@@ -39,25 +42,25 @@
                 <a href="{{ route('index') }}">
                     <img src="{{ asset('img/icones/logo.svg') }}" alt="imagem da logo" class="icone_logo-cabecalho">
                 </a>
-                <p class="nome_logo-cabecalho">Eco Point</p>
+                <p class="nome_logo-cabecalho">Rodaki</p>
             </div>
         </nav>
     </header>
 
     <main class="container">
         <section class="plano-pagamento">
-            <div class="plano-detalhe prata">
-                <h2>Plano Prata</h2>
-                <p>Ideal para quem busca um equilíbrio entre preço e benefícios.</p>
+            <div class="plano-detalhe Standard">
+                <h2>Plano Standard</h2>
+                <p>Ideal para quem busca uma opção acessível e prática para o dia a dia.</p>
                 <div class="descricao">
                     <h3>Detalhes do Plano:</h3>
-                    <p>O Plano Prata oferece acesso a bicicletas tradicionais e elétricas, proporcionando mais versatilidade para suas necessidades de transporte. É a escolha ideal para quem deseja explorar a cidade de maneira sustentável.</p>
+                    <p>O Plano Standard oferece acesso a uma rede de bicicletas tradicionais, permitindo que você se mova facilmente pela cidade. Este plano é perfeito para quem deseja uma alternativa sustentável e econômica para o transporte urbano.</p>
                 </div>
                 <ul>
-                    <li>Acesso a bicicletas tradicionais e elétricas</li>
-                    <li>Disponibilidade em todas as estações Eco Point</li>
-                    <li>Suporte técnico disponível</li>
-                    <li>Até 4 horas de uso por dia</li>
+                    <li>Acesso a bicicletas tradicionais</li>
+                    <li>Disponibilidade em todas as estações Rodaki</li>
+                    <li>Suporte básico em caso de problemas técnicos</li>
+                    <li>Até 2 horas de uso por dia</li>
                     <li>Cancelamento a qualquer momento sem taxas</li>
                 </ul>
             </div>
@@ -100,4 +103,5 @@
         }
     </script>
 </body>
+
 </html>
